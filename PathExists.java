@@ -15,7 +15,7 @@ public class PathExists extends BreadthFirstSearch {
 		this.v = v;
 		start(u);
 
-		return false;
+		return pathExists;
 	}
 
 	@Override

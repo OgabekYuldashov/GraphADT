@@ -12,5 +12,9 @@ public class PathExists extends BreadthFirstSearch {
 	public boolean pathExists(Vertex u, Vertex v) {
 		return false;
 	}
-	
+
+	@Override
+	protected void additionalProcessing() {
+		super.additionalProcessing();
+	}
 }

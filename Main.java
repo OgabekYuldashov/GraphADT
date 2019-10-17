@@ -24,25 +24,25 @@ public class Main {
 
 		System.out.println("Is the graph connected?");
 		System.out.println(g.isConnected());
-//
-//		System.out.println("Does the graph have cycle?");
-//		System.out.println(g.containsCycle());
-//
-//		System.out.println("Is there a path?");
-//		System.out.println(g.hasPathBetween(new Vertex("A"),new Vertex("F")));
-//		System.out.println(g.hasPathBetween(new Vertex("A"),new Vertex("D")));
-//
-//		//Note: Shortest Path Alg assumes G is connected
-//		List<Edge> list = new ArrayList<Edge>();
-//		list.add(new Edge("A","B"));
-//		list.add(new Edge("B","C"));
-//		list.add(new Edge("A","C"));
-//		list.add(new Edge("C","D"));
-//
-//		Graph cg = new Graph(list);
-//		Vertex start = new Vertex("A");
-//		Vertex end = new Vertex("D");
-//		System.out.println("Shortest Path/Shortest Path Length:");
-//		System.out.println(g.shortestPathLength(start, end));
+
+		System.out.println("Does the graph have cycle?");
+		System.out.println(g.containsCycle());
+
+		System.out.println("Is there a path?");
+		System.out.println(g.hasPathBetween(new Vertex("A"),new Vertex("F")));
+		System.out.println(g.hasPathBetween(new Vertex("A"),new Vertex("D")));
+
+		//Note: Shortest Path Alg assumes G is connected
+		List<Edge> list = new ArrayList<Edge>();
+		list.add(new Edge("A","B"));
+		list.add(new Edge("B","C"));
+		list.add(new Edge("A","C"));
+		list.add(new Edge("C","D"));
+
+		Graph cg = new Graph(list);
+		Vertex start = new Vertex("A");
+		Vertex end = new Vertex("D");
+		System.out.println("Shortest Path/Shortest Path Length:");
+		System.out.println(g.shortestPathLength(start, end));
 	}
 }

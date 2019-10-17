@@ -60,18 +60,24 @@ public class Graph {
 
 	//TO-DO
 	public boolean isConnected() {
-		return false;
+		IsConnected connCheck = new IsConnected(this);
+		return connCheck.isConnected();
 	}
 	//TO-DO
 	public boolean hasPathBetween(Vertex u, Vertex v) {
-		return false;
+		if(u == null || v == null) return false;
+
+		PathExists pathCheck = new PathExists(this);
+		return pathCheck.pathExists(u, v);
 	}
 	//TO-DO
 	public boolean containsCycle() {
-		return false;
+		HasCycle cycleCheck = new HasCycle(this);
+		return cycleCheck.hasCycle();
 	}
 	//TO-DO
     int shortestPathLength(Vertex u, Vertex v) {
+
     	return -1;
     }
 

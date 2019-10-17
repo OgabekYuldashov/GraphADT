@@ -15,10 +15,20 @@ public class ShortestPath extends BreadthFirstSearch {
 
 	}
 
+	@Override
+	protected void processEdge(Edge e) {
+		if(levelsMap.size() == 0) {
+			levelsMap.put(e.v, 0);
+			parentMap.put(e.v, null);
+		}
+		parentMap.put(e.u , e.v);
+		levelsMap.put(e.u, levelsMap.get(parentMap.get(e.u)) + 1);
+	}
+
 	//TO-DO
 	public int computeShortestPathLength(Vertex s, Vertex v) {
-		return -1;
-
+		start(s);
+		return levelsMap.get(v);
 	}
 
 	
